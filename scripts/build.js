@@ -88,6 +88,7 @@ async function build(target) {
   const env =
     (pkg.buildOptions && pkg.buildOptions.env) ||
     (devOnly ? 'development' : 'production')
+    //  执行 rollup 命令，运行 rollup 打包工具
   await execa(
     'rollup',
     [
